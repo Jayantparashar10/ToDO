@@ -7,5 +7,7 @@ urlpatterns = [
     path('todo/<int:pk>/', TodoDetailView.as_view(), name='todo_detail'),
     path('todo/new/', TodoCreateView.as_view(), name='todo_create'),
     path('todo/<int:pk>/edit/', TodoUpdateView.as_view(), name='todo_edit'),
+    path('signup',views.signup, name='signup'),
+    path('signin',views.signin, name='signin'),
     path('todo/<int:pk>/delete/', TodoDeleteView.as_view(), name='todo_delete'),
 ]
