@@ -1,13 +1,12 @@
 # todo/urls.py
 from django.urls import path
-from .views import TodoListView, TodoDetailView, TodoCreateView, TodoUpdateView, TodoDeleteView, signin, signup
+from .views import ToDoListView, ToDoDetailView, ToDoCreateView, ToDoUpdateView, ToDoDeleteView
 
 urlpatterns = [
-    path('', TodoListView.as_view(), name='todo_list'),
-    path('todo/<int:pk>/', TodoDetailView.as_view(), name='todo_detail'),
-    path('todo/new/', TodoCreateView.as_view(), name='todo_create'),
-    path('todo/<int:pk>/edit/', TodoUpdateView.as_view(), name='todo_edit'),
-    path('signup', signup.as_view(), name='signup'),
-    path('signin',views.signin, name='signin'),
-    path('todo/<int:pk>/delete/', TodoDeleteView.as_view(), name='todo_delete'),
+    path('', ToDoListView.as_view(), name='todo_list'),
+    path('todo/<int:pk>/', ToDoDetailView.as_view(), name='todo_detail'),
+    path('todo/new/', ToDoCreateView.as_view(), name='todo_create'),
+    path('todo/<int:pk>/edit/', ToDoUpdateView.as_view(), name='todo_edit'),
+    
+    path('todo/<int:pk>/delete/', ToDoDeleteView.as_view(), name='todo_delete'),
 ]

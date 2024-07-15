@@ -1,12 +1,12 @@
 {% extends 'todo/base.html' %}
-
+{% load static %}
 {% block title %}To-Do List{% endblock %}
 
 {% block content %}
 <h1>To-Do List</h1>
 <ul>
     {% for todo in object_list %}
-        <li style="opacity: 0; transform: translateY(20px); transition: all 0.3s;">
+        <li style="opacity: 100; transform: translateY(20px); transition: all 0.3s;">
             <span>{{ todo.title }}</span>
             <div>
                 <a href="{% url 'todo_detail' todo.pk %}">View</a>

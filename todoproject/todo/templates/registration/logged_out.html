@@ -1,0 +1,9 @@
+
+{% extends "todo/base.html" %}
+{% load static %}
+{% block title %}Logged Out{% endblock %}
+
+{% block content %}
+<h2>Logged Out</h2>
+<p>You have been logged out. <a href="{% url 'login' %}">Log in again</a></p>
+{% endblock %}
